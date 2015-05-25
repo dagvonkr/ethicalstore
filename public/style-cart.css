@@ -1,0 +1,216 @@
+/*C A R T S L I D E R */
+
+.border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+cart {
+  display: flex;
+}
+cart > div {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 450px;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-transition: -webkit-transform ease 450ms;
+  -moz-transition: -webkit-transform ease 450ms;
+  -ms-transition: -webkit-transform ease 450ms;
+  -o-transition: -webkit-transform ease 450ms;
+  transition: -webkit-transform ease 450ms;
+  -webkit-transition: transform ease 450ms;
+  -moz-transition: transform ease 450ms;
+  -ms-transition: transform ease 450ms;
+  -o-transition: transform ease 450ms;
+  transition: transform ease 450ms;
+}
+cart > div.left {
+  background: #222326;
+  left: -250px;
+}
+cart > div.show.left {
+  transform: translate3d(250px, 0, 0);
+  -ms-transform: translate3d(250px, 0, 0);
+  -webkit-transform: translate3d(250px, 0, 0);
+  -o-transform: translate3d(250px, 0, 0);
+  -moz-transform: translate3d(250px, 0, 0);
+}
+cart > div.right {
+  background: #f1f2f2;
+  right: -450px;
+}
+cart > div.show.right {
+  transform: translate3d(-450px, 0, 0);
+  -ms-transform: translate3d(-450px, 0, 0);
+  -webkit-transform: translate3d(-450px, 0, 0);
+  -o-transform: translate3d(-450px, 0, 0);
+  -moz-transform: translate3d(-450px, 0, 0);
+}
+
+cart > div > cart-your-bag {
+  display: flex;
+  align-self: flex-end;
+
+
+}
+cart > div > cart-your-bag > div {	
+  float: left;
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  height: 50px;
+  padding: 15px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #333539;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*--*/
+
+
+
+cart > div > cart-item {
+  display: flex;
+
+}
+cart > div > cart-item > div {
+  float: left;
+  background: #fff;
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 15px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #333539;
+}
+cart > div > cart-item > div:hover {
+  color: #F0F0F0;
+}
+cart > div > cart-item > div > span {
+  float: left;
+  color: inherit;
+}
+.cart-bottom {
+	align-items: flex-end;
+  margin-top: 438px;
+}
+
+.colorsize{
+	font-size: 14px;
+}
+
+/*--*/
+
+cart > div > cart-sub-total {
+  display: flex;
+
+}
+cart > div > cart-sub-total > div {
+  float: left;
+  background: #f8f9f9;
+  width: 100%;
+
+  margin: 0;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 15px 15px;
+  font-size: 17px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #6e7074;
+  font-weight: 400;
+}
+cart > div > cart-sub-total > div > span {
+  float: left;
+  color: inherit;
+}
+
+/*--*/
+
+cart > div > cart-shipping {
+  display: flex;
+
+}
+cart > div > cart-shipping > div {
+  float: left;
+  background: #f8f9f9;
+  width: 100%;
+
+  margin: 0;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 15px 15px;
+  font-size: 17px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #6e7074;
+  font-weight: 400;
+}
+cart > div > cart-shipping > div > span {
+  float: left;
+  color: inherit;
+}
+
+/*--*/
+
+cart > div > cart-total {
+  display: flex;
+
+}
+cart > div > cart-total > div {
+  float: left;
+  background: #fbfbfb;
+  width: 100%;
+
+  margin: 0;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding: 15px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #525356;
+  font-weight: 500;
+}
+cart > div > cart-total > div > span {
+  float: left;
+  color: inherit;
+}
+
+/*--*/
+
+
+cart > div > cart-checkout {
+  display: flex;
+  align-self: flex-end;
+}
+
+cart > div > cart-checkout > div {	
+  float: left;
+  background: #2d2e32;
+  width: 100%;
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #f1f2f2;
+  text-align: center;
+  font-size: 30px;
+}
+cart > div > cart-checkout > div:hover {
+  color: #73dfb0;
+}

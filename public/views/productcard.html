@@ -1,0 +1,40 @@
+ <!-- In results, we show a message if there are no results, and
+       a list of results otherwise. -->
+<section class="results">
+  <div class="no-products" ng-hide="products.length">No results</div>
+<!-- _____ -->
+
+
+
+<!-- kanskje lage et directive en gang?	 <div product-card> </div> -->
+	<!-- We show one of these elements for each recipe in $scope.recipes.
+    The ng-cloak directive prevents our templates from showing on load. -->
+    <div class="cardwrapper">
+		<div ng-repeat="obj in showTestData" ng-cloak>	
+			<div class="product-card-test">
+				<p> <a ui-sref="product.id({id: obj.id})" <strong>{{obj.title}}</strong> </a> <br>
+				{{obj.description}} <br>
+				Price: {{obj.price}},- <br>	
+				Made by: {{ obj.retailer.retailerName }} <br>
+				Category: {{obj.category.categoryName}} <br> <br> </p>
+
+				<button class="wish-btn"> Add to wishlist </button>
+				<button class="cart-btn"> Add to cart </button>
+			</div>
+		</div>
+	</div>
+
+
+ <!-- We put a link that calls $scope.loadMore to load more recipes
+         and append them to the results.-->
+    <div class="load-more" ng-hide="allResults" ng-cloak>
+      <a ng-click="loadMore()">More...</a>
+    </div>
+
+</section>
+
+<div ui-view> </div>
+
+
+
+	

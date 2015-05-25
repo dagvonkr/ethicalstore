@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html ng-app="ethicalstore">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ethical Store</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="style-cart.css">
+	<link rel="stylesheet" href="style.css">
+<!-- 	<link rel="stylesheet" type="text/less" href="cartslider.less">
+ -->
+</head>
+<body ng-controller="mainCtrl">
+
+<header class="row"> 
+
+<div class="logoicon">
+	<a ui-sref="landingpage"> <img src="img/logo.png" alt="logo"> </a>
+</div>
+
+
+<!-- S E A R C H  F I E L D -->
+<div class="searchbox-header">
+	<section class="searchField">
+    <form ng-submit="search()">
+      <input class="search-input" type="text" ng-model="searchTerm">
+      <input class="search-btn" type="submit" value="Search">
+    </form>
+  </section>
+</div>
+
+<!-- SLIDING CART -->
+<div ng-controller="cartsliderCtrl">	
+	<div class="bagicon"  ng-click="showRight($event)">
+		<img src="img/bagicon.png" alt="logo">
+
+		<cart visible="rightVisible" alignment="right">
+			<cart-your-bag> </cart-your-bag>
+
+			    <cart-item ui-sref="products">Item <br> <div class="colorsize">
+			    Color, size</div></cart-item>
+				<cart-item ui-sref="products">Item <br> <div class="colorsize">Color, size</div></cart-item>
+				<cart-item ui-sref="products">Item <br> <div class="colorsize">Color, size</div></cart-item>
+			<cart-sub-total class="cart-bottom"> </cart-sub-total> 
+			<cart-shipping> </cart-shipping> 
+			<cart-total> </cart-total> 
+			<cart-checkout ui-sref="checkout"> Checkout </cart-checkout>
+		</cart>
+	</div>
+</div>
+<!-- !SLIDING CART -->
+
+
+</header>
+
+
+<nav id="cbp-hrmenu" class="cbp-hrmenu">
+	<ul> 
+		<li>
+			<a ui-sref="products">Fashion</a>
+			<div class="cbp-hrsub">
+				<div class="cbp-hrsub-inner"> 
+					<div>
+						<h4>Womens</h4>
+						<ul>
+							<li><a ui-sref="products">sub</a></li>
+							<li><a ui-sref="products">sub</a></li>
+							<li><a ui-sref="products">sub</a></li>
+							<li><a ui-sref="products">sub</a></li>
+							<li><a ui-sref="products">sub</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Mens</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Kids</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+					</div>
+				</div><!-- /cbp-hrsub-inner -->
+			</div><!-- /cbp-hrsub -->
+		</li>
+		<li>
+			<a href="#">Accesoires</a>
+			<div class="cbp-hrsub">
+				<div class="cbp-hrsub-inner">
+					<div>
+						<h4>Interior</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+						<h4>Weareble</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Bags</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Bedrom</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+					</div>
+				</div><!-- /cbp-hrsub-inner -->
+			</div><!-- /cbp-hrsub -->
+		</li>
+		<li>
+			<a href="#">Food</a>
+			<div class="cbp-hrsub">
+				<div class="cbp-hrsub-inner"> 
+					<div>
+						<h4>Eat</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+
+						</ul>
+					</div>
+					<div>	
+						<h4>Drink</h4>
+						<ul>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+							<li><a href="#">sub</a></li>
+						</ul>
+					</div>
+				</div><!-- /cbp-hrsub-inner -->
+			</div><!-- /cbp-hrsub -->
+		</li>
+		<li>
+			<a href="#">Interior</a>
+			<div class="cbp-hrsub">
+				<div class="cbp-hrsub-inner"> 
+					<div>
+						<h4>Learning &amp; Games</h4>
+						<ul>
+							<li><a href="#">Catch the Bullet</a></li>
+							<li><a href="#">Snoopydoo</a></li>
+							<li><a href="#">Fallen Angel</a></li>
+							<li><a href="#">Sui Maker</a></li>
+							<li><a href="#">Wave Master</a></li>
+							<li><a href="#">Golf Pro</a></li>
+						</ul>
+						<h4>Utilities</h4>
+						<ul>
+							<li><a href="#">Gadget Finder</a></li>
+							<li><a href="#">Green Tree Express</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Entertainment</h4>
+						<ul>
+							<li><a href="#">Gadget Finder</a></li>
+							<li><a href="#">Green Tree Express</a></li>
+							<li><a href="#">Green Tree Pro</a></li>
+							<li><a href="#">Holy Cannoli</a></li>
+							<li><a href="#">Wobbler 3.0</a></li>
+							<li><a href="#">Coolkid</a></li>
+						</ul>
+					</div>
+				</div><!-- /cbp-hrsub-inner -->
+			</div><!-- /cbp-hrsub -->
+		</li>
+		<li>
+			<a href="#">Gifts</a>
+			<div class="cbp-hrsub">
+				<div class="cbp-hrsub-inner"> 
+					<div>
+						<h4>Utilities</h4>
+						<ul>
+							<li><a href="#">Green Tree Pro</a></li>
+							<li><a href="#">Wobbler 3.0</a></li>
+							<li><a href="#">Coolkid</a></li>
+						</ul>
+						<h4>Education</h4>
+						<ul>
+							<li><a href="#">Learn Thai</a></li>
+							<li><a href="#">Math Genius</a></li>
+							<li><a href="#">Chemokid</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Professionals</h4>
+						<ul>
+							<li><a href="#">Success 1.0</a></li>
+							<li><a href="#">Moneymaker</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Learning &amp; Games</h4>
+						<ul>
+							<li><a href="#">Catch the Bullet</a></li>
+							<li><a href="#">Snoopydoo</a></li>
+							<li><a href="#">Fallen Angel</a></li>
+							<li><a href="#">Sui Maker</a></li>
+							<li><a href="#">Wave Master</a></li>
+							<li><a href="#">Golf Pro</a></li>
+						</ul>
+					</div>
+				</div><!-- /cbp-hrsub-inner -->
+			</div><!-- /cbp-hrsub -->
+		</li>
+	</ul>
+</nav>
+
+
+
+
+
+
+<!-- LANDINGPAGE -->
+
+<div ui-view>
+	<div class="container">
+
+		<div ui-view="landingpage"></div>
+		<div ui-view="featured1"></div>
+		<div ui-view="category"></div>
+
+
+	</div>
+</div>
+
+<!-- !LANDINGPAGE -->
+
+<!-- <footer class="row"> FOOTER </footer> -->
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/elasticsearch/elasticsearch.angular.js"></script>
+<!-- <script src="bower_components/less/dist/less.js"></script>
+ -->
+
+<script src="app.js"></script>
+<script src="controllers/mainCtrl.js"></script>
+<script src="controllers/rootCtrl.js"></script>
+<script src="controllers/menuCtrl.js"></script>
+<script src="controllers/landingpageCtrl.js"></script>
+<script src="controllers/productcardCtrl.js"></script>
+<script src="controllers/productIdCtrl.js"></script>
+<script src="controllers/categoryCtrl.js"></script>
+<script src="controllers/cartsliderCtrl.js"></script>
+<script src="services/productcardService.js"></script>
+<script src="services/productSearchService.js"></script>
+<script src="directives/cartsliderDirective.js"></script>
+<script src="scripts/topmenu.js"></script>
+<script src="elasticSearchModule.js"></script>
+
+<script>
+	$(function() {
+		cbpHorizontalMenu.init();
+	});
+</script>
+
+	
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+[
+{
+"_id": "555646c2143697f21f5cffa3",
+"user": "user01",
+"title": "Jeans",
+"description": "Dark slim fit",
+"price": 1299,
+"size": "L",
+"instock": true,
+"retailer": "Carlings",
+"__v": 0
+},
+{
+"_id": "555647f3143697f21f5cffa4",
+"user": "user02",
+"title": "Sweather",
+"description": "Marine blue sweather made of 50% lin and 50% cotton",
+"price": 899,
+"size": "M",
+"instock": true,
+"retailer": "SweathShop",
+"__v": 0
+},
+{
+"_id": "55564837143697f21f5cffa5",
+"user": "user03",
+"title": "Jeans",
+"description": "Blue chinos",
+"price": 399,
+"size": "L",
+"instock": false,
+"retailer": "Acne",
+"__v": 0
+},
+{
+"_id": "55564868143697f21f5cffa6",
+"user": "user04",
+"title": "Jenas",
+"description": "comforable jeans for kids with sailboat motive",
+"price": 249,
+"size": "onesize",
+"instock": false,
+"retailer": "Pyre",
+"__v": 0
+},
+{
+"_id": "555648a0143697f21f5cffa7",
+"user": "user05",
+"title": "Socks",
+"description": "Comfy wool socks made in Ethiopia. Made with the best wool there is.",
+"price": 129,
+"size": "L",
+"instock": true,
+"retailer": "Sucks with no socks",
+"__v": 0
+},
+{
+"_id": "555648df143697f21f5cffa8",
+"user": "user06",
+"title": "T-shirt",
+"description": "Blue slim fit T-shirt with 100% cotton for extra comfort",
+"price": 329,
+"size": "S",
+"instock": true,
+"retailer": "UniQlo",
+"__v": 0
+},
+{
+"_id": "55564942143697f21f5cffa9",
+"user": "user07",
+"title": "Belt",
+"description": "Black classic belt for the cassual man and the stylish hipster",
+"price": 699,
+"size": "onesize",
+"instock": false,
+"retailer": "The belt shop",
+"__v": 0
+}
+]

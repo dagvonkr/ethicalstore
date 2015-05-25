@@ -1,0 +1,19 @@
+<div class="product-view">
+	<!-- Ingen ng-repeat når det bare er ett objekt -->
+	<h2>{{showProductData.title}} </h2>
+				
+	<h4>	{{ showProductData.description }} </h4>
+	<p> Colors available <strong>{{showProductData.color}}</strong> </p>
+	<p>	Price <strong>{{ showProductData.price }} NOK </strong> </p>
+	<p>	In stock <strong>{{ showProductData.itemsInStock }} </strong> </p>
+	<p>	Retailer <strong>{{ showProductData.retailer.retailerName }} </strong> </p>
+	<p>	Category <strong>{{ showProductData.category.categoryName }} </strong> </p>
+
+	<br>
+
+	
+		<button class="cart-productid" ng-click="submitToCart()"> Add to cart </button>
+
+
+
+</div>
