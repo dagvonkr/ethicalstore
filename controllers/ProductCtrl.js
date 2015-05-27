@@ -40,7 +40,7 @@ module.exports = {
 				return res.status(500).send(err);
 			} else {
 				res.send(result); // hvor sendes result ? $q service ? 
-				console.log('Result i db:', result, ', dette funker');
+				// console.log('Result i db:', result, ', dette funker');
 			}
 			// console.log('req.params: ', req.params);	
 			// console.log('This is the result:', result);

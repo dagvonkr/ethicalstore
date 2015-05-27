@@ -11,9 +11,23 @@
 
 	<br>
 
-	
-		<button class="cart-productid" ng-click="submitToCart()"> Add to cart </button>
 
+	<div ui-view> </div>
+
+	<!-- Har med hele car-viewet her slik at når det klikkes, så slider carten inn -->
+	<div ng-controller="cartsliderCtrl">	
+		<div class="bagicon"  ng-click="showRight($event)">
+			<cart visible="rightVisible" alignment="right">
+				<ngcart-cart></ngcart-cart>
+				<ngcart-checkout service="http" settings="{ url:'/checkout' }"> Checkout </ngcart-checkout>
+			</cart>
+			
+			<!-- Her er selve addingen av item -->
+			<ngcart-addtocart id="{{ showProductData.id }}" name="{{showProductData.title}}" price="{{showProductData.price}}"> Add to cart </ngcart-addtocart>	
+			
+	
+		</div>
+	</div>
 
 
 </div>

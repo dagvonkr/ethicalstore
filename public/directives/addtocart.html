@@ -1,0 +1,19 @@
+<div ng-hide="attrs.id">
+    <a class="cart-productid" ng-disabled="true" ng-transclude></a>
+
+</div>
+<div ng-show="attrs.id">
+    <div>
+        <span ng-show="quantityMax">
+            <select name="quantity" id="quantity" ng-model="q"
+                    ng-options=" v for v in qtyOpt"></select>
+        </span>
+        <a class="cart-productid"
+           ng-click="ngCart.addItem(id, name, price, q, data)"
+           ng-transclude></a>
+    </div>
+    <!-- Her kan du lage en sexy X ved siden av hvis det blir kult. -->
+    <!-- <mark  ng-show="inCart()">
+        This item is in your cart. <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">Remove</a>
+    </mark> -->
+</div>

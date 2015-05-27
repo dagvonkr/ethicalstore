@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var ProductCtrl = require('./controllers/ProductCtrl');
 var CategoryCtrl = require('./controllers/CategoryCtrl');
 var RetailerCtrl = require('./controllers/RetailerCtrl');
+var OrderCtrl = require('./controllers/OrderCtrl.js')
 
 var port = 8080;
 var app = express();
@@ -32,15 +33,17 @@ app.get('/api/category/:id', CategoryCtrl.readId);
 app.put('/api/category/:id', CategoryCtrl.update);
 app.delete('/api/category/:id', CategoryCtrl.delete);
 
-
 app.post('/retailer', RetailerCtrl.create);
 app.get('/retailer', RetailerCtrl.read);
 app.get('/api/retailer/:id', RetailerCtrl.readId);
 app.put('/api/retailer/:id', RetailerCtrl.update);
 app.delete('/api/retailer/:id', RetailerCtrl.delete);
 
-
-
+app.post('/order', OrderCtrl.create);
+app.get('/order', OrderCtrl.read);
+app.get('/api/order:id', OrderCtrl.readId);
+app.put('/api/order:id', OrderCtrl.update);
+app.delete('/api/order:id', OrderCtrl.delete);
 
 
 

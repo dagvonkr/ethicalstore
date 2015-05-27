@@ -7,20 +7,31 @@ html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	overflow-y: scroll;
 
 }
 .container{
 	height: 100%;
-
 }
 
 
+
+
+.big-image img {
+	max-width: 100%;
+	position: absolute;
+	z-index: -10;
+}
 
 
 /*H E A D E R*/
 
 header {
-	background: #89c7d4;
+	background-image: url('img/skybg.jpg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
 	color: #3b3b3b;
 	height: 75px;
 	opacity: 1;
@@ -28,14 +39,10 @@ header {
 .logoicon img{
 	float: left;
 	margin-top: 10px;
-	margin-left: 14px;
-	width: 50px;}
-.bagicon img{
-	float: right;
-	margin-top: -45px;
-	margin-right: 20px;
-	width: 37px;}
-
+	margin-left: 30px;
+	width: 50px;
+}
+	
 
 .searchbox-header {
 	margin-top: 20px;
@@ -70,7 +77,8 @@ header {
 .cbp-hrmenu {
 	width: 100%;
 	margin-top: 0em;
-	border-bottom: 1px solid #3b3b3b;
+	border-bottom: 0px solid #3b3b3b;
+	opacity: 0.9;
 }
 
 /* general ul style */
@@ -215,14 +223,22 @@ header {
 
 /*L A N D I N G P A G E*/
 
+.landingpage-wrapper {
+	width: 100%;
+}
+
 .landingpage-placeholder {
 	width: 100%;
-	background: #f5f8f8;
+	background-image: url('img/skybg.jpg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
 	font-size: 50px;
-	color: #3b3b3b;
+	color: #fff;
 	text-align: center;
-	margin: 20px 0px 20px 0px;
-	padding: 70px 20px 70px 20px;
+	margin: 0px 0px 20px 0px;
+	padding: 300px 20px 300px 20px;
 }
 
 .featured-wrapper {
@@ -317,7 +333,21 @@ header {
 	border: none;
 	border-radius: 12px;
 	padding: 5px 30px 5px 30px;
+	cursor: pointer;
 }
+
+
+.alert {
+	border: none;
+}
+.alert-warning {
+	font-size: 16px;
+	color: #6a6f72;
+	background-color: #fff;
+	margin-bottom: 0px;
+}
+
+
 
 
 footer {

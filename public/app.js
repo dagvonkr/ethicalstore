@@ -1,15 +1,4 @@
-var app = angular.module('ethicalstore', ['ui.router', 'ui.bootstrap', 'elasticsearch']);
-
-app.run(function($rootScope) {
-    document.addEventListener("keyup", function(e) {
-        if (e.keyCode === 27)
-            $rootScope.$broadcast("escapePressed", e.target);
-    });
-
-    document.addEventListener("click", function(e) {
-        $rootScope.$broadcast("documentClicked", e.target);
-    });
-});
+var app = angular.module('ethicalstore', ['ui.router', 'ui.bootstrap', 'elasticsearch', 'ngCart']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -80,7 +69,33 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: 'views/food.html',
 		controller: 'categoryCtrl'
 	})
+
+	.state('checkout', {
+		url: '/checkout',
+		templateUrl: 'views/checkout.html',
+		controller: ('checkout', function($scope, ngCart, fulfilmentProvider) {
+                $scope.ngCart = ngCart;
+
+                $scope.checkout = function () {
+                    fulfilmentProvider.setService($scope.service);
+                    fulfilmentProvider.setSettings($scope.settings);
+                    var promise = fulfilmentProvider.checkout();
+                    console.log(promise);
+                }
+            })
+	})
 	
 });
 
 
+
+app.run(function($rootScope) {
+    document.addEventListener("keyup", function(e) {
+        if (e.keyCode === 27)
+            $rootScope.$broadcast("escapePressed", e.target);
+    });
+
+    document.addEventListener("click", function(e) {
+        $rootScope.$broadcast("documentClicked", e.target);
+    });
+});

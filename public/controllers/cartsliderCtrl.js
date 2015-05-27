@@ -1,6 +1,9 @@
 var app = angular.module('ethicalstore');
 
-app.controller('cartsliderCtrl', function($scope, $rootScope) {
+app.controller('cartsliderCtrl', function($scope, $rootScope, ngCart) {
+	
+	  // ngCart
+    $scope.ngCart = ngCart;
 	
 	$scope.leftVisible = false;
     $scope.rightVisible = false;
@@ -29,8 +32,8 @@ app.controller('cartsliderCtrl', function($scope, $rootScope) {
         });
     }
 
+  
 
-    
 	
 
 })

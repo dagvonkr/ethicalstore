@@ -6,11 +6,14 @@
 	<title>Ethical Store</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="style-cart.css">
+	<link rel="stylesheet" href="custom-bootstrap.css">
 	<link rel="stylesheet" href="style.css">
 <!-- 	<link rel="stylesheet" type="text/less" href="cartslider.less">
  -->
 </head>
 <body ng-controller="mainCtrl">
+
+
 
 <header class="row"> 
 
@@ -20,7 +23,7 @@
 
 
 <!-- S E A R C H  F I E L D -->
-<div class="searchbox-header">
+<!-- <div class="searchbox-header">
 	<section class="searchField">
     <form ng-submit="search()">
       <input class="search-input" type="text" ng-model="searchTerm">
@@ -28,23 +31,22 @@
     </form>
   </section>
 </div>
-
+ -->
 <!-- SLIDING CART -->
+
+
+
 <div ng-controller="cartsliderCtrl">	
 	<div class="bagicon"  ng-click="showRight($event)">
-		<img src="img/bagicon.png" alt="logo">
+
+	<ngcart-summary></ngcart-summary>
+
 
 		<cart visible="rightVisible" alignment="right">
-			<cart-your-bag> </cart-your-bag>
 
-			    <cart-item ui-sref="products">Item <br> <div class="colorsize">
-			    Color, size</div></cart-item>
-				<cart-item ui-sref="products">Item <br> <div class="colorsize">Color, size</div></cart-item>
-				<cart-item ui-sref="products">Item <br> <div class="colorsize">Color, size</div></cart-item>
-			<cart-sub-total class="cart-bottom"> </cart-sub-total> 
-			<cart-shipping> </cart-shipping> 
-			<cart-total> </cart-total> 
-			<cart-checkout ui-sref="checkout"> Checkout </cart-checkout>
+			<ngcart-cart></ngcart-cart>
+			<button class="cart-checkout" ui-sref="checkout"> Checkout </button>
+
 		</cart>
 	</div>
 </div>
@@ -267,14 +269,12 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/elasticsearch/elasticsearch.angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script><script src="bower_components/elasticsearch/elasticsearch.angular.js"></script>
 <!-- <script src="bower_components/less/dist/less.js"></script>
  -->
 
 <script src="app.js"></script>
 <script src="controllers/mainCtrl.js"></script>
-<script src="controllers/rootCtrl.js"></script>
 <script src="controllers/menuCtrl.js"></script>
 <script src="controllers/landingpageCtrl.js"></script>
 <script src="controllers/productcardCtrl.js"></script>
@@ -282,8 +282,11 @@
 <script src="controllers/categoryCtrl.js"></script>
 <script src="controllers/cartsliderCtrl.js"></script>
 <script src="services/productcardService.js"></script>
+<script src="services/ngCart.fulfilment.js"></script>
+<script src="services/ngCart.js"></script>
 <script src="services/productSearchService.js"></script>
-<script src="directives/cartsliderDirective.js"></script>
+<!-- <script src="directives/cartsliderDirective.js"></script> -->
+<script src="directives/ngCart.directives.js"></script>
 <script src="scripts/topmenu.js"></script>
 <script src="elasticSearchModule.js"></script>
 

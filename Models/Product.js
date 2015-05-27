@@ -17,4 +17,5 @@ var productSchema = new mongoose.Schema ({
 	retailer: {type: Schema.Types.ObjectId, ref: 'Retailer'}
 })
 
+
 module.exports = mongoose.model('Product', productSchema);

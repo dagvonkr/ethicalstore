@@ -1,3 +1,27 @@
+/* C A R T I C O N */
+
+.cart-icon-wrapper {
+  float: right;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.total-items{
+  color: #fff;
+  font-weight: 100;
+  font-size: 12px;
+  margin-left: -114px;
+  margin-top: 21px;
+  text-align: center;
+}
+
+.bag-icon {
+  float: right;
+  width: 37px;
+}
+
+
+
 /*C A R T S L I D E R */
 
 .border-box {
@@ -71,35 +95,25 @@ cart > div > cart-your-bag > div {
 }
 
 /*--*/
-
-
-
-cart > div > cart-item {
-  display: flex;
-
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 1px solid #f8f8f8;
+    border-bottom: none;
+    padding: 11px;
 }
-cart > div > cart-item > div {
-  float: left;
+
+
+
+.table-responsive{
   background: #fff;
-  width: 100%;
-  height: 75px;
   margin: 0;
-  margin-top: 2px;
-  margin-bottom: 2px;
+
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   color: #333539;
 }
-cart > div > cart-item > div:hover {
-  color: #F0F0F0;
-}
-cart > div > cart-item > div > span {
-  float: left;
-  color: inherit;
-}
+
+
 .cart-bottom {
 	align-items: flex-end;
   margin-top: 438px;
@@ -109,32 +123,6 @@ cart > div > cart-item > div > span {
 	font-size: 14px;
 }
 
-/*--*/
-
-cart > div > cart-sub-total {
-  display: flex;
-
-}
-cart > div > cart-sub-total > div {
-  float: left;
-  background: #f8f9f9;
-  width: 100%;
-
-  margin: 0;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  padding: 15px 15px;
-  font-size: 17px;
-  cursor: pointer;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  color: #6e7074;
-  font-weight: 400;
-}
-cart > div > cart-sub-total > div > span {
-  float: left;
-  color: inherit;
-}
 
 /*--*/
 
@@ -192,15 +180,9 @@ cart > div > cart-total > div > span {
 
 /*--*/
 
-
-cart > div > cart-checkout {
-  display: flex;
-  align-self: flex-end;
-}
-
-cart > div > cart-checkout > div {	
-  float: left;
+.cart-checkout {
   background: #2d2e32;
+  border: none;
   width: 100%;
   margin: 0;
   padding: 10px 15px;
@@ -210,7 +192,4 @@ cart > div > cart-checkout > div {
   color: #f1f2f2;
   text-align: center;
   font-size: 30px;
-}
-cart > div > cart-checkout > div:hover {
-  color: #73dfb0;
 }

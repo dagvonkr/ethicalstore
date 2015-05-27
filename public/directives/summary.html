@@ -1,0 +1,12 @@
+<div class="cart-icon-wrapper">
+	<div class="row">
+	    <div class="col-md-6">
+	  	<!-- Lag en sexy svg icon her etterhvert -->
+	        <img src="img/bagicon.png" alt="logo" class="bag-icon">
+	    </div>
+	    <div class="col-md-6"> <div class="total-items">{{ ngCart.getTotalItems() }} </div>
+	        <ng-pluralize count="ngCart.getTotalItems()" when="{1: '', 'other':''}"></ng-pluralize>
+	       <!--  <br />{{ ngCart.totalCost() | currency: "Kr " }} -->
+	    </div>
+	</div>
+</div>
