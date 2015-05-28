@@ -8,22 +8,22 @@ var Schema = mongoose.Schema;
 
 var orderSchema = new mongoose.Schema({
 	// embedded both the product info and the customer info 
-	nonUserOrderInfo: {
+	userInfo: {
 		name: { type: String, required: true, minlength: 3, maxlength: 50},
-		email: {type: String, required: true, unique: true},
-		adress: {
-			shippingadress: {
+		email: {type: String, required: true, index: true},
+		address: {
+			shippingaddress: {
 				street: {type: String, required: true},
 				zipcode: {type: String, required: true},
-				city: {type: String, required: true},
-				country: {type: String, required: true}
-				},
-			billingadress: {
-				street: {type: String, required: true},
-				zipcode: {type: String, required: true},
-				city: {type: String, required: true},
-				country: {type: String, required: true}
-			}	
+				city: {type: String, required: true}
+				// country: {type: String, required: true}
+				}
+			// billingaddress: {
+			// 	street: {type: String, required: true},
+			// 	zipcode: {type: String, required: true},
+			// 	city: {type: String, required: true},
+			// 	country: {type: String, required: true}
+			// }	
 		}
 	},	
 	// when I post to this db, it will get the whole Product onject from the Product schema	
