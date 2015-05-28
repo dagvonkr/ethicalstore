@@ -80,19 +80,11 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
     .directive('ngcartCheckout', [function(){
         return {
             restrict : 'E',
-            controller : ('checkout', ['$scope', 'ngCart', 'fulfilmentProvider', function($scope, ngCart, fulfilmentProvider) {
-                $scope.ngCart = ngCart;
-
-                $scope.checkout = function () {
-                    fulfilmentProvider.setService($scope.service);
-                    fulfilmentProvider.setSettings($scope.settings);
-                    var promise = fulfilmentProvider.checkout();
-                    console.log(promise);
-                }
-            }]),
+            controller : 'checkoutCtrl',
             scope: {
                 service:'@',
-                settings:'='
+                settings:'=',
+                user: '='
             },
             transclude: true,
             templateUrl: 'directives/checkout.html'

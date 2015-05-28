@@ -1,6 +1,6 @@
 
 <div ng-if="service=='http' || service == 'log'">  <!-- enten caches i clienten eller HVIS DU ER BRUKER caches i server. --> 
-    <button class="cart-checkout" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+    <button class="cart-checkout" ng-click="checkout(user)" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
 </div>
 
 

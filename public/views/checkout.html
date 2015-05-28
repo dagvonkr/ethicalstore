@@ -1,19 +1,38 @@
+<div class="checkout-wrapper">
+
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<p class="checkout-login"> LOG IN </p>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<p class="checkout-signup"> SIGN UP </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 <!-- Litt rart at hele greia her er en <row> Bør sjekke dette ut -->
 <div class="form-wrapper">
 	<div class="row">  
 		<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
-		
-			<form name="nonuserOrderForm" ng-submit="nonuserSubmitOrder(nonuserOrderForm.$valid)" novalidate>
-		
+
+			<h4> Or... </h4>
+			<br>
+			<h3> Just order without a user: </h3>
+			<br>
+
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-						<input type="email" name="email" placeholder="Your email" class="userinfo-form" ng-model="email" required>
+						<input type="email" name="email" placeholder="Your email" class="userinfo-form" ng-model="user.email">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
-						<input type="text" name="name" placeholder="Name of the reciever" class="shippinginfo-form" ng-model="name" required>
+						<input type="text" name="name" placeholder="Name of the reciever" class="shippinginfo-form" ng-model="user.shipname" required>
 					</div>
 					<div class="col-lg-6 col-md-6">
 						<input type="text" name="name" placeholder="Your full name" class="billinginfo-form" >
@@ -21,7 +40,7 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
-						<input type="text" name="adress" placeholder="Your shipping adress" class="shippinginfo-form" ng-model="adress" required>
+						<input type="text" name="adress" placeholder="Your shipping adress" class="shippinginfo-form" ng-model="user.shipadress"> 
 					</div>
 					<div class="col-lg-6 col-md-6">
 						<input type="text" name="adress" placeholder="Your billing adress" class="billinginfo-form" >
@@ -29,26 +48,26 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
-						<input type="text" name="zip" placeholder="Zip shipping code" class="shippinginfo-form" ng-model="zip" required>
+						<input type="text" name="zip" placeholder="Zip shipping code" class="shippinginfo-form" ng-model="user.shipzip">
 					</div>
 					<div class="col-lg-6 col-md-6">
 						<input type="text" name="zip" placeholder="Your zip code" class="billinginfo-form">
 					</div>
 					<div class="col-lg-6 col-md-6">
-						<input type="text" name="city" placeholder="Your shipping city" class="shippinginfo-form" ng-model="city" required>
+						<input type="text" name="city" placeholder="Your shipping city" class="shippinginfo-form" ng-model="user.shipcity">
 					</div>
 					<div class="col-lg-6 col-md-6">
 						<input type="text" name="city" placeholder="Your city" class="billinginfo-form">
 					</div>
 				</div>
 				
-			</form>
+
 
 
 			<ngcart-cart class="checkout-lastcart"></ngcart-cart>
 
 
-			<ngcart-checkout service="http" settings="{ url: '/order' }">
+			<ngcart-checkout user="user" service="http" settings="{ url: '/order' }">
 				Pay with creditcard	
 			</ngcart-checkout>
 
@@ -59,4 +78,4 @@
 		</div>
 	</div>
 </div>
-
+</div>

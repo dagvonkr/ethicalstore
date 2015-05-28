@@ -351,6 +351,10 @@ header {
 
 /* L A S T  C H E C K O U T  V I E W  */
 
+.checkout-wrapper {
+	margin-top: 100px;
+}
+
 .form-wrapper{
 	margin-top: 75px;
 
@@ -397,6 +401,31 @@ header {
 
 .checkout-lastcart{
 	font-size: 20px;
+}
+
+.checkout-login {
+  background: #434653;
+  border: none;
+  padding: 15px 15px 15px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #f1f2f2;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.checkout-signup {
+  background: #7dd0e3;
+  border: none;
+  padding: 15px 15px 15px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #f1f2f2;
+  text-align: center;
+  font-size: 30px;
 }
 
 footer {
