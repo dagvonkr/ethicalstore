@@ -32,7 +32,7 @@ app.service('productcardService', function($http, $q) {
 			url: '/category/'
 		}).then(function(result) {
 
-			console.log('Result from category db -->', result, '<--');
+			// console.log('Result from category db -->', result, '<--');
 
 			if ( result.status === 404) {
 				console.log('Det er noe galt med respons fra id')

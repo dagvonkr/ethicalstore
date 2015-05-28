@@ -12,6 +12,7 @@ module.exports = {
 			} else {
 				res.send(result);
 			}
+			console.log('Create order i server', result);
 		});
 	},
 

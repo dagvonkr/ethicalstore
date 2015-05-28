@@ -2,7 +2,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var Product = require('./Product');
+
+// tok vekk denne da jeg ikke embedder likevel ?? 
+// var Product = require('./Product');
 
 var orderSchema = new mongoose.Schema({
 	// embedded both the product info and the customer info 
@@ -25,13 +27,17 @@ var orderSchema = new mongoose.Schema({
 		}
 	},	
 	// when I post to this db, it will get the whole Product onject from the Product schema	
-	productOrders: [{
-		product: [Product], // refererer til var Product = require('./Product') MODEL
-		quantity: {type: Number} // get the quantity from the front-end
-	}],
+	productOrders: {
+		product: [{
+			_id: {type: String, required: true},
+			_name: { type: String, required: true },
+			_price: { type: Number, required: true },
+			_quantity: { type: Number, required: true }  
+		}], // refererer til var Product = require('./Product') MODEL
+	},
 	date: { type: Date, default: Date.now },
 
-	status: {type: String} // pending, shipped etc 	
+	status: {type: String, default: 'pending'} // pending, shipped etc 	
 });
 
 module.exports = mongoose.model('Order', orderSchema);

@@ -73,23 +73,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	.state('checkout', {
 		url: '/checkout',
 		templateUrl: 'views/checkout.html',
-		controller: ('checkout', function($scope, ngCart, fulfilmentProvider) {
-                $scope.ngCart = ngCart;
-
-                $scope.checkout = function () {
-                    fulfilmentProvider.setService($scope.service);
-                    fulfilmentProvider.setSettings($scope.settings);
-                    var promise = fulfilmentProvider.checkout();
-                    console.log(promise);
-                }
-            })
+		controller: 'checkoutCtrl' 
 	})
-	
 });
 
 
 
 app.run(function($rootScope) {
+
+	// Her kan jeg kanskje legge inn gestures som gjør at carten slider tilbake når jeg feks legger til et produkt i stede for at det kommer en kopi som nå
+
     document.addEventListener("keyup", function(e) {
         if (e.keyCode === 27)
             $rootScope.$broadcast("escapePressed", e.target);
