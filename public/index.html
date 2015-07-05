@@ -269,9 +269,12 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script><script src="bower_components/elasticsearch/elasticsearch.angular.js"></script>
-<!-- <script src="bower_components/less/dist/less.js"></script>
- -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/elasticsearch/elasticsearch.angular.js"></script>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<!-- NBNB!! ngular-payments still doesn't have any version tags in its repository, which means that your code may suddenly fail if they release a new version and break some APIs. Go to airpair.com -->
+<script src="bower_components/angular-payments/lib/angular-payments.js"></script>
 
 <script src="app.js"></script>
 <script src="controllers/mainCtrl.js"></script>
@@ -285,10 +288,10 @@
 <script src="services/ngCart.fulfilment.js"></script>
 <script src="services/ngCart.js"></script>
 <script src="services/productSearchService.js"></script>
-<!-- <script src="directives/cartsliderDirective.js"></script> -->
 <script src="directives/ngCart.directives.js"></script>
 <script src="scripts/topmenu.js"></script>
 <script src="elasticSearchModule.js"></script>
+
 
 <script>
 	$(function() {

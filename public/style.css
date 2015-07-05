@@ -1,4 +1,5 @@
 @font-face { font-family: Avenir; src: url('../fonts/Avenir.ttc'); } 
+@font-face { font-family: DroidSerif; src: url('../fonts/DroidSerif.ttf'); } 
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
@@ -38,9 +39,9 @@ header {
 }
 .logoicon img{
 	float: left;
-	margin-top: 10px;
-	margin-left: 30px;
-	width: 50px;
+	margin-top: 30px;
+	margin-left: 50px;
+	width: 60px;
 }
 	
 
@@ -229,6 +230,7 @@ header {
 
 .landingpage-placeholder {
 	width: 100%;
+	
 	background-image: url('img/skybg.jpg');
 	background-position: center center;
   	background-repeat: no-repeat;
@@ -237,9 +239,48 @@ header {
 	font-size: 50px;
 	color: #fff;
 	text-align: center;
-	margin: 0px 0px 20px 0px;
-	padding: 300px 20px 300px 20px;
+	padding: 250px 20px 300px 20px;
+
 }
+
+.landingpage-logo {
+	text-align: center;
+	width: 11%;
+	margin-top: -170px;
+}
+
+.landingpage-quote{
+	font-family: 'DroidSerif';
+	color: #4c4c54;
+	word-spacing: 16px;
+	letter-spacing: 2px;
+	margin-top: 0px;
+	margin-bottom: 120px;
+
+}
+
+.shopnow-btn{
+	font-size: 30px;
+	text-align: center;
+	padding: 17px 50px 15px 50px;
+	border: 5px solid #fff;
+	background: none;
+	font-weight: 500;
+	pointer: cursor;
+}
+
+.shopnow-btn:hover{
+	background: #66d9aa;
+	border-color: #66d9aa;
+}
+
+/*.buttoncart-productid{
+	background-color: #66d9aa;
+	text-decoration: none;
+	color: #fff;
+	border-color: #66d9aa;
+
+}*/
 
 .featured-wrapper {
 	display: flex;
@@ -287,53 +328,100 @@ header {
 }
 
 
-/*P R O D U C T C A R D*/
+/*P R O D U C T C A R  I D*/
 
 
-.product-card-test{
-	width: 200px;
-	font-weight: 400;
-	text-align: center;
-	background: #f5f8f8;
-	margin: 20px 20px 20px 20px;
+.product-card{
+	width: 300px;
+	height: 400px;
+	background: none;
+	border: 1px solid #e5e8e8;
+	margin: 10px 10px 10px 10px;
 	padding: 20px 20px 20px 20px; 
 
 }
 
-
-
-.wish-btn{
-	background: none;
-	border: solid;
-	border-width: 1px;
-	border-radius: 10px;
-	margin-bottom: 10px;
-	padding: 4px 18px 4px 18px;
+.productcard-title{
+	margin-top: -16px;
+	text-align: left;
+	font-weight: 500;
+	font-size: 15px;
 }
 
-.cart-btn{
-	color: #fff;
-	background: #4cc18c;
+.productcard-price{
+
+	text-align: left;
+	font-weight: 200;
+	font-size: 13px;
+}
+
+.productcard-img {
+	width: 283px;
+	height: 340px;
+	margin-left: -12px;
+	margin-top: -10px;
+}
+
+
+
+.add-to-cart-productid {
+	background: #66d9aa;	
 	border: none;
-	border-radius: 10px;
-	padding: 5px 30px 5px 30px;
+	padding: 5px 50px 5px 10px;
+	cursor: pointer;	
+	font-size: 23px;
+	border-radius: 12px;
 }
 
 /*P R O D U C T  V I E W  */
 
-.product-view {
-	margin-left: 50px;
-	margin-top: 50px;
-	width: 500px;
+.productid-view{
+	margin-right: 100px;
 }
 
-.cart-productid{
-	color: #fff;
-	background: #4cc18c;
-	border: none;
-	border-radius: 12px;
-	padding: 5px 30px 5px 30px;
+.add-to-cart-productview-word {
+	width: 50px;
+	height: 50px;
+	color: #e5e8e8;
+}
+.add-to-cart-productview-word:hover {
+	width: 50px;
+	height: 50px;
+	text-decoration: none;
+	color: #2d2e32;
+
+}
+
+.add-to-cart-productview{
+
+	color: #e5e8e8;
+	background: none;
+	/*border: 2px solid #2d2e32;*/
+	border: 1px solid #e5e8e8;
+	border-radius: 50%;
+	padding: 1px 7px 1px 7px;
 	cursor: pointer;
+	font-weight: 300;
+	float: right;
+	font-size: 15px;
+	float: right;
+	margin-right: -20px;
+}
+
+.add-to-cart-productview:hover {
+	color: #2d2e32;
+	text-decoration: none;
+	border-color: #2d2e32;
+}
+
+.productid-text{
+	margin-right: 100px;
+	margin-top: 300px;
+}
+
+
+.productid-img{
+	width: 600px;
 }
 
 
@@ -360,6 +448,10 @@ header {
 
 }
 
+.checkout-order-right{
+	
+}
+
 .userinfo-form {
 	width: 100%;
 	margin: 5px 10px 5px 10px;
@@ -369,7 +461,7 @@ header {
 	background: none;
 	font-weight: 400;
 	color: #2d2e32;
-	border: 1px solid #f1f2f2;
+	border: 1px solid #c8edf2;
 	letter-spacing: 2px;
 }
 
@@ -382,14 +474,14 @@ header {
 	background: none;
 	font-weight: 300;
 	color: #2d2e32;
-	border: 1px solid #cef2dc;
+	border: 1px solid #c8edf2;
 	letter-spacing: 2px;
 }
 
 .billinginfo-form {
 	width: 100%;
-	margin: 5px 10px 5px 10px;
-	padding: 7px 30px 3px 30px;
+	margin: 5px 0px 5px 0px;
+	padding: 7px 25px 3px 25px;
 	font-size: 20px;
 	border-radius: 10px;
 	background: none;
@@ -426,6 +518,20 @@ header {
   color: #f1f2f2;
   text-align: center;
   font-size: 30px;
+}
+
+.checkout-submit-payment{
+   margin-top: 30px;
+   margin-left: 13px;
+  background: #434653;
+  border: none;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #f1f2f2;
+  text-align: center;
+  font-size: 23px;
 }
 
 footer {
