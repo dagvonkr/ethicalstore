@@ -1,0 +1,11 @@
+db_template.json
+elasticsearch-1.5.2/
+fonts/DroidSerif-Bold.ttf
+fonts/DroidSerif-Italic.ttf
+fonts/DroidSerif.ttf
+node_modules/
+package.json
+products_dummydata.json
+public/bower_components/angular-payments/
+public/img/lplogo.png
+public/scripts/stripe.js
