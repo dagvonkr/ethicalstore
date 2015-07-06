@@ -1,13 +1,25 @@
 <div class="checkout-wrapper">
+	
+<div class="row">  
+	<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
+		
+		<div class="checkout-order-right">
+			<h3> Check that your order is right: </h3>
+		</div>
+		<ngcart-cart class="checkout-lastcart"></ngcart-cart>
+	</div>
+</div>	
+
+<br>
 
 <div class="row">
 	<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
 		<div class="row">
 			<div class="col-lg-6 col-md-6">
-				<p class="checkout-login"> LOG IN </p>
+				<p class="checkout-login"> Log in </p>
 			</div>
 			<div class="col-lg-6 col-md-6">
-				<p class="checkout-signup"> SIGN UP </p>
+				<p class="checkout-signup"> Sign up </p>
 			</div>
 		</div>
 	</div>
@@ -20,60 +32,66 @@
 	<div class="row">  
 		<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
 
-			<h4> Or... </h4>
-			<br>
-			<h3> Just order without a user: </h3>
+			<h3> Order without a user: </h3>
 			<br>
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<input type="email" name="email" placeholder="Your email" class="userinfo-form" ng-model="user.email">
 					</div>
-				</div>
+				</div>	
+			<br>
+			<br>
+			<h3> Where would you like us to send this to? </h3>
+			<br>	
+
+
 				<div class="row">
-					<div class="col-lg-6 col-md-6">
+					<div class="col-lg-12 col-md-12">
 						<input type="text" name="name" placeholder="Name of the reciever" class="shippinginfo-form" ng-model="user.shipname" required>
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="name" placeholder="Your full name" class="billinginfo-form" >
-					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="adress" placeholder="Your shipping adress" class="shippinginfo-form" ng-model="user.shipadress"> 
-					</div>
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="adress" placeholder="Your billing adress" class="billinginfo-form" >
+					<div class="col-lg-12 col-md-12">
+							<input type="text" name="adress" placeholder="Your shipping adress" class="shippinginfo-form" ng-model="user.shipadress"> 
 					</div>
 				</div>
+					
+
 				<div class="row">
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="zip" placeholder="Zip shipping code" class="shippinginfo-form" ng-model="user.shipzip">
+					<div class="col-lg-3 col-md-3">
+						<input type="text" name="zip" placeholder="Zip code" class="userinfo-form" ng-model="user.shipzip">
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="zip" placeholder="Your zip code" class="billinginfo-form">
+
+					<div class="col-lg-4 col-md-4">
+						<input type="text" name="city" placeholder="City" class="userinfo-form" ng-model="user.shipcity">
 					</div>
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="city" placeholder="Your shipping city" class="shippinginfo-form" ng-model="user.shipcity">
-					</div>
-					<div class="col-lg-6 col-md-6">
-						<input type="text" name="city" placeholder="Your city" class="billinginfo-form">
-					</div>
-				</div>
 				
+					<div class="col-lg-5 col-md-5">
+						<input type="text" placeholder="Country" class="userinfo-form" ng-model="user.country">
+					</div>	
+				</div>
 
+			<br>
+			<br>
+			<br>		
 
-
-			<ngcart-cart class="checkout-lastcart"></ngcart-cart>
-
-
-			<ngcart-checkout user="user" service="http" settings="{ url: '/order' }">
-				Pay with creditcard	
+		
+	
+			<ngcart-checkout class="checkout-to-payment" ui-sref="checkout-payment" user="user" service="http" settings="{ url: '/order' }">
+				Proceed to payment
 			</ngcart-checkout>
 
-			<ngcart-checkout service="paypal" settings="{ url:'/checkout' }">
+			<br>
+			<br>
+
+
+
+			<div ui-view></div>
+
+			<!-- <ngcart-checkout service="paypal" settings="{ url:'/checkout' }">
 				Pay with PayPal
-			</ngcart-checkout>
+			</ngcart-checkout> -->
 
 		</div>
 	</div>

@@ -2,17 +2,26 @@
 var Order = require('../models/Orders.js');
 
 module.exports = {
+
+
+
+
+
 	create: function(req, res) {
+		console.log('Req.body in create: ', req.body);
 		var newOrder = new Order(req.body);
+
 
 		// lagrer det som skulle komme inn:
 		newOrder.save(function(err, result) {
 			if (err) {
+				console.log('Error in server:', err);
 				return res.status(500).send(err)
 			} else {
 				res.send(result);
+				console.log('Success in sending to db:', result);
 			}
-			console.log('Create order i server', result);
+			
 		});
 	},
 

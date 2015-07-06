@@ -1,7 +1,9 @@
 
-<div ng-if="service=='http' || service == 'log'">  <!-- enten caches i clienten eller HVIS DU ER BRUKER caches i server. --> 
-    <button class="cart-checkout" ng-click="checkout(user)" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+<div ng-if="service=='http' || service == 'log'">  
+    <a ui-sref="checkout"> <button class="cart-checkout" ng-click="checkout(user)" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button></a>
 </div>
+
+<!-- Passing the user to checkout so that when clicked the function in the controller will run  -->
 
 
 

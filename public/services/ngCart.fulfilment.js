@@ -1,25 +1,7 @@
 
 angular.module('ngCart.fulfilment', [])
 
-    .service('takeOrderPutInDatabase', ['$injector', function($injector){
-
-    }])
-    
-    // CONSOLE LOG ALLE TING SOM SKJER NEDOVER HER.
-
-    // SJEKK MOT CONTROLLER, DET LIGGER I APP.JS 
-
-    // ENDRE OBJEKT SLIK AT DET TAR INN BRUKER INFO
-
-    // HVORDAN STORE BRUKER INFO, ADRESSE ETC..? --> GJØR DET HER SOM VANLIG. 
-    // DET ER DETTE SOM ER SERVICEN TIL CHECKOUT SÅ DET ER HER DET SKAL GJØRES
-    // SEND SÅ DETTE MED HTTP REQUEST. BETALINGSLØSNINGEN SKAL SKJE SENERE
-
-    // FOR Å FORSTÅ HVA SOM SKJER KAN DET VÆRE LURT Å VED CHECKOUT RETT OG SLETT
-    // SENDE BESTILLINGSOBJEKTET OG FORMEN TIL DATABASEN.  
-
-
-    // I thik this is all for sending further to either log, http or paypal:
+    // This is just sending you to  either log, http or paypal:
     .service('fulfilmentProvider', ['$injector', function($injector){
 
         this._obj = {
@@ -78,6 +60,10 @@ angular.module('ngCart.fulfilment', [])
 
         var order = ngCart.$cart.items;
 
+        console.log('Postin order object to server', orderObj);
+
+        console.log('Settings', settings);
+
         var orderObj = {}
 
         orderObj['productOrders.product'] = order;  
@@ -86,6 +72,7 @@ angular.module('ngCart.fulfilment', [])
         orderObj['userInfo.address.shippingaddress.street'] = user.shipadress;
         orderObj['userInfo.address.shippingaddress.zipcode'] = user.shipzip;
         orderObj['userInfo.address.shippingaddress.city'] = user.shipcity;
+
 
 
         return $http({

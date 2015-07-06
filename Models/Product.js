@@ -13,7 +13,6 @@ var productSchema = new mongoose.Schema ({
 	// inStock: {type: Boolean, required: true }, 
 	// Jeg har ant items in stock som kan bli false om det er > 0 
 	category: {type: Schema.Types.ObjectId, ref: 'Category'},
-	// Feil: er det fordi det er et array (det refererer ikke til et array)
 	retailer: {type: Schema.Types.ObjectId, ref: 'Retailer'}
 })
 

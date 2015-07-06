@@ -181,11 +181,11 @@ cart > div > cart-total > div > span {
 /*--*/
 
 .cart-checkout {
-  background: #2d2e32;
+  background: #434653;
   border: none;
   width: 100%;
   margin: 0;
-  padding: 10px 15px;
+  padding: 15px 15px 15px 15px;
   cursor: pointer;
   box-sizing: border-box;
   -moz-box-sizing: border-box;

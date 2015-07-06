@@ -1,18 +1,30 @@
-<div class="product-view">
+<div class="row">
+	<div class="productid-view">
 	<!-- Ingen ng-repeat når det bare er ett objekt -->
-	<h2>{{showProductData.title}} </h2>
-				
-	<h4>	{{ showProductData.description }} </h4>
-	<p> Colors available <strong>{{showProductData.color}}</strong> </p>
-	<p>	Price <strong>{{ showProductData.price }} NOK </strong> </p>
-	<p>	In stock <strong>{{ showProductData.itemsInStock }} </strong> </p>
-	<p>	Retailer <strong>{{ showProductData.retailer.retailerName }} </strong> </p>
-	<p>	Category <strong>{{ showProductData.category.categoryName }} </strong> </p>
+	<div class="col-lg-6 col-md-offset-1 col-md-6 col-md-offset-1">
+	
+		<img ng-src="{{ showProductData.category.categoryDummyImageUrl}}" alt="img" class="productid-img">
+	
+	</div>
 
-	<br>
+	<div class="col-lg-5 col-md-5">
 
+		<div class="productid-text">
 
-	<div ui-view> </div>
+			<h2>{{showProductData.title}} </h2>
+						
+			<h4>	{{ showProductData.description }} </h4>
+			<p> Colors available <strong>{{showProductData.color}}</strong> </p>
+			<p>	Price <strong>{{ showProductData.price }} NOK </strong> </p>
+			<p>	In stock <strong>{{ showProductData.itemsInStock }} </strong> </p>
+			<p>	Retailer <strong>{{ showProductData.retailer.retailerName }} </strong> </p>
+			<p>	Category <strong>{{ showProductData.category.categoryName }} </strong> </p>
+
+			<br>
+
+		</div>
+
+	</div> <!-- col --> 	
 
 	<!-- Har med hele car-viewet her slik at når det klikkes, så slider carten inn -->
 	<div ng-controller="cartsliderCtrl">	
@@ -23,11 +35,19 @@
 			</cart>
 			
 			<!-- Her er selve addingen av item -->
-			<ngcart-addtocart id="{{ showProductData._id }}" name="{{showProductData.title}}" price="{{showProductData.price}}"> Add to cart </ngcart-addtocart>	
+			<ngcart-addtocart class="add-to-cart-productid" id="{{ showProductData._id }}" name="{{showProductData.title}}" price="{{showProductData.price}}"> Add to cart </ngcart-addtocart>	
 			
 	
 		</div>
 	</div>
+
+
+
+
+
+	<div ui-view> </div>
+
+	</div> <!-- productid-view -->
 
 
 </div>

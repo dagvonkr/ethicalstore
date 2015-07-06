@@ -1,6 +1,10 @@
-var app = angular.module('ethicalstore', ['ui.router', 'ui.bootstrap', 'elasticsearch', 'ngCart']);
+var app = angular.module('ethicalstore', ['ui.router', 'ui.bootstrap', 'elasticsearch', 'ngCart', 'angularPayments']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
+
+	// Initzializing Stripe:
+	
+
 
 	$urlRouterProvider.otherwise('/');
 
@@ -73,6 +77,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	.state('checkout', {
 		url: '/checkout',
 		templateUrl: 'views/checkout.html',
+		controller: 'checkoutCtrl' 
+	})
+
+	.state('checkout-payment', {
+		url: '/checkout-payment',
+		templateUrl: 'views/checkout-payment.html',
 		controller: 'checkoutCtrl' 
 	})
 });
