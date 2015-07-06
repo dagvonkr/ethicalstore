@@ -17,4 +17,5 @@ package.json
 products_dummydata.json
 public/bower_components/angular-payments
 public/img
+public/img/logo.png
 public/scripts
