@@ -1,3 +1,14 @@
+# Logs
+logs
+*.log
+
+
+# Coverage directory used by tools like istanbul
+coverage
+
+
+# Directories:
+
 db_template.json
 elasticsearch-1.5.2
 fonts
