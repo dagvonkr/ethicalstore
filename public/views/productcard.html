@@ -5,58 +5,48 @@
 <!-- _____ -->
 
 
-
-<!-- kanskje lage et directive en gang?	 <div product-card> </div> -->
-	<!-- We show one of these elements for each recipe in $scope.recipes.
-    The ng-cloak directive prevents our templates from showing on load. -->
-
-
     
-<div class="cardwrapper">
-    	
-			<div ng-repeat="obj in showTestData" ng-cloak>	
-				<div class="product-card">
-				
+<div class="cardwrapper">	
+	<div ng-repeat="obj in showTestData" ng-cloak>	
+		<div class="product-card">	
+
 				<a ui-sref="product.id({id: obj.id})">	
 					<img ng-src="{{ obj.category.categoryDummyImageUrl}}" alt="img" class="productcard-img">
 				</a>
-		<div class="col-lg-10 col-md-10">	
-				<p> <a ui-sref="product.id({id: obj.id})">
-				 <div class="productcard-title"> {{obj.title}} </a> <br> </div>
 
-				<div class="productcard-price">
-				NOK: {{obj.price}},- <br>	</p>
-				</div>
-	
-		</div>
+			<div class="col-lg-10 col-md-10">	
+					<p> <a ui-sref="product.id({id: obj.id})">
+					 <div class="productcard-title"> {{obj.title}} </a> <br> </div>
 
-				<!-- Har med hele car-viewet her slik at når det klikkes, så slider carten inn -->
-				<div ng-controller="cartsliderCtrl">	
-					<div ng-click="showRight($event)">
-						<cart visible="rightVisible" alignment="right">
-							<ngcart-cart></ngcart-cart>
-							<ngcart-checkout service="http" settings="{ url:'/checkout' }"> Checkout </ngcart-checkout>
-						</cart>
-		<div class="col-lg-2 col-md-2">				
-	
-					
-
-						<!-- Her er selve addingen av item -->
-						<ngcart-addtocart class="add-to-cart-productview" id="{{ obj._id }}" name="{{obj.title}}" price="{{obj.price}}"> + </ngcart-addtocart>
-
-		</div>						
+					<div class="productcard-price">
+					NOK: {{obj.price}},- <br>	</p>
 					</div>
-				</div>
+			</div>
 
-				</div>
-</div>		
 
+			<div ng-controller="cartsliderCtrl">	
+				<div class="col-lg-2 col-md-2">		
+						
+					<!-- Her er selve addingen av item -->
+					<ngcart-addtocart ng-click="showRight($event)" class="add-to-cart-productview" id="{{ obj._id }}" name="{{obj.title}}" price="{{obj.price}}">
+						
+					  +  
+
+					</ngcart-addtocart>
+			
+				</div>
+			</div>			
+
+	
+		</div> <!-- product-card class -->
+	</div> <!-- ng-repeat -->
+</div>	<!-- card-wrapper -->	
 
  <!-- We put a link that calls $scope.loadMore to load more recipes
          and append them to the results.-->
-    <div class="load-more" ng-hide="allResults" ng-cloak>
-      <a ng-click="loadMore()">More...</a>
-    </div>
+	<div class="load-more" ng-hide="allResults" ng-cloak>
+	  <a ng-click="loadMore()">More...</a>
+	</div>
 
 </section>
 

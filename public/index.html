@@ -5,10 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Ethical Store</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="style-cart.css">
-	<link rel="stylesheet" href="custom-bootstrap.css">
-	<link rel="stylesheet" href="style.css">
-<!-- 	<link rel="stylesheet" type="text/less" href="cartslider.less">
+	<link rel="stylesheet" href="styles/style-cart.css">
+	<link rel="stylesheet" href="styles/custom-bootstrap.css">
+	<link rel="stylesheet" href="styles/style.css">
+<!-- 	<link rel="stylesheet" type="text/less" href="styles/cartslider.less">
  -->
 </head>
 <body ng-controller="mainCtrl">
@@ -32,10 +32,9 @@
   </section>
 </div>
  -->
+
+
 <!-- SLIDING CART -->
-
-
-
 <div ng-controller="cartsliderCtrl">	
 	<div class="bagicon"  ng-click="showRight($event)">
 
@@ -45,7 +44,8 @@
 		<cart visible="rightVisible" alignment="right">
 
 			<ngcart-cart></ngcart-cart>
-			<button class="cart-checkout" ui-sref="checkout"> Checkout </button>
+			        
+        	<!--  <div class="cart-checkout" ui-sref="checkout"> Checkout </div> -->  
 
 		</cart>
 	</div>

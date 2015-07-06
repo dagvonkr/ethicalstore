@@ -113,6 +113,12 @@ cart > div > cart-your-bag > div {
   color: #333539;
 }
 
+tfoot{
+  position: fixed;
+  bottom: 0;
+}
+
+
 
 .cart-bottom {
 	align-items: flex-end;
@@ -180,15 +186,22 @@ cart > div > cart-total > div > span {
 
 /*--*/
 
+.added-to-cart-wrapper{
+  overflow-y: auto; 
+}
+
+.td-checkout{
+  width: 250px;
+}
+
 .cart-checkout {
+
   background: #434653;
   border: none;
   width: 100%;
   margin: 0;
   padding: 15px 15px 15px 15px;
   cursor: pointer;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   color: #f1f2f2;
   text-align: center;
   font-size: 30px;

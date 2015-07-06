@@ -6,17 +6,21 @@
 <div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
 
     <table class="table ngCart cart">
+    
+            <thead>
+            <tr>
+                <div class="added-to-cart-wrapper">
+                    <th></th>
+                    <th></th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                </div>                
+            </tr>
+            </thead>
 
-        <thead>
-        <tr>
-            <th></th>
-            <th></th>
-            <th>Quantity</th>
-            <th>Amount</th>
-            <th>Total</th>
-        </tr>
-        </thead>
-        <tfoot>
+
+        <tfoot> 
         <tr ng-show="ngCart.getTax()">
             <td></td>
             <td></td>
@@ -36,9 +40,18 @@
             <td></td>
             <td></td>
             <td>Total:</td>
-            <td>{{ ngCart.totalCost() | currency:"Kr" }}</td>
+            <td>{{ ngCart.totalCost() | currency:"Kr " }}</td>
         </tr>
+
+        <tr>
+            <td class="td-checkout">
+                <div class="cart-checkout" ui-sref="checkout"> Checkout </div>
+            </td>
+        </tr>    
+        
+
         </tfoot>
+
         <tbody>
         <tr ng-repeat="item in ngCart.getCart().items track by $index">
             <td><span ng-click="ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span></td>
