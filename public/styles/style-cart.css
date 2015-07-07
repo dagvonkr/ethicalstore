@@ -206,3 +206,27 @@ cart > div > cart-total > div > span {
   text-align: center;
   font-size: 30px;
 }
+
+@media screen and (max-width: 992px) { 
+  /* C A R T I C O N */
+
+.cart-icon-wrapper {
+  margin-top: 18px;
+  margin-right: 30px;
+}
+
+.total-items{
+  position: absolute;
+  margin-left: 16px;
+  margin-top: 20px;
+}
+
+.bag-icon {
+  float: right;
+  width: 37px;
+} 
+
+  
+    
+
+}

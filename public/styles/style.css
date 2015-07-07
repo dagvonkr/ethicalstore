@@ -9,6 +9,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	overflow-y: scroll;
+	background-color: #eaf1fa;
 
 }
 .container{
@@ -28,7 +29,7 @@ html, body {
 /*H E A D E R*/
 
 header {
-	background-image: url('img/skybg.jpg');
+	background-color: #fff;
 	background-position: center center;
   	background-repeat: no-repeat;
   	background-attachment: fixed;
