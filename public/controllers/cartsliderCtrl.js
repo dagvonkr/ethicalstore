@@ -1,6 +1,16 @@
 var app = angular.module('ethicalstore');
 
-app.controller('cartsliderCtrl', function($scope, $rootScope, ngCart) {
+app.controller('cartsliderCtrl', function($scope, $rootScope, ngCart, $location) {
+
+
+    // To hide checkoutbutton in the /checkout view
+    // One error: if you refresh on /checkout the button hides in cartslider too
+    var locationCheckout;
+    if($location.$$url === '/checkout') {
+        $scope.locationCheckout = true
+    } else if ($location.$$url !== '/checkout') {
+        $scope.locationCheckout = false;
+    }
 	
 	  // ngCart
     $scope.ngCart = ngCart;

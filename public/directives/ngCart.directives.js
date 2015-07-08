@@ -57,7 +57,7 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
 
     .directive('ngcartCart', [function(){
         return {
-            restrict : 'E',
+            restrict : 'EA',
             controller : 'cartsliderCtrl',
             scope: {},
             templateUrl: 'directives/cart.html',

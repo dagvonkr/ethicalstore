@@ -1,3 +1,5 @@
+
+
 <div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
     Your cart is empty
 </div>
@@ -38,28 +40,35 @@
     
 </div>
 
-     <div class="cart-footer">
-        <table> 
-            <tr ng-show="ngCart.getTax()">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
-                <td>{{ ngCart.getTax() | currency }}</td>
-            </tr>
-            <tr ng-show="ngCart.getShipping()">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>Shipping:</td>
-                <td>{{ ngCart.getShipping() | currency }}</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Total:</td>
-                <td>{{ ngCart.totalCost() | currency:"Kr " }}</td>
-            </tr>
+    <div class="cart-footer">
+        <div class="cart-tax-shipping-total"> 
+            <table>
+                <tr ng-show="ngCart.getTax()">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Tax ({{ ngCart.getTaxRate() }}%):</td>
+                    <td>{{ ngCart.getTax() | currency }}</td>
+                </tr>
+                <tr ng-show="ngCart.getShipping()">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Shipping:</td>
+                    <td>{{ ngCart.getShipping() | currency }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total:&nbsp;</td>
+                    <td>{{ ngCart.totalCost() | currency:"Kr " }}</td>
+                </tr>
+            </table>                  
+        </div>
+     
 
+        <table ng-hide="locationCheckout"> 
             <tr>
                 <td>
                     <div class="cart-checkout" ui-sref="checkout">
@@ -79,10 +88,11 @@
                 <td></td>
                 <td></td>    
             </tr>
-        </table>    
+        </table> <!-- ng-hide -->   
     </div>
 
    
+
 
 <style>
     .ngCart.cart span[ng-click] {

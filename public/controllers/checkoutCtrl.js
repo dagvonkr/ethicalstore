@@ -1,10 +1,10 @@
 var app = angular.module('ethicalstore');
 
-app.controller('checkoutCtrl',function($scope, ngCart, fulfilmentProvider, $window) {
+app.controller('checkoutCtrl',function($scope, ngCart, fulfilmentProvider, $window, $location) {
 
     $scope.ngCart = ngCart;
+    console.log('ngCart in controller:', ngCart);
 
-    console.log('ngCart in controller:', ngCart)
 
     $scope.checkout = function () {
 

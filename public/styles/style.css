@@ -9,7 +9,6 @@ html, body {
 	height: 100%;
 	margin: 0;
 	overflow-y: scroll;
-	background-color: #eaf1fa;
 
 }
 .container{
@@ -37,6 +36,7 @@ header {
 	color: #3b3b3b;
 	height: 75px;
 	opacity: 1;
+	background-color: #f6f9f9;
 }
 .logoicon img{
 	float: left;

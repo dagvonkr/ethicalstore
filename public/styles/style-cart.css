@@ -211,9 +211,17 @@ cart > div > cart-total > div > span {
   position: absolute;
   bottom: 0;
   padding: none;
+    background-color: #f5f8f8; 
 }
 
+.cart-tax-shipping-total{
+  font-size: 16px;
+  font-weight: 600;
+  float: right;
+  padding: 20px 30px 20px 20px;
 
+
+}
 
 
 
