@@ -99,25 +99,21 @@ cart > div > cart-your-bag > div {
     border-top: 1px solid #f8f8f8;
     border-bottom: none;
     padding: 11px;
+
 }
 
 
 
 .table-responsive{
+  height: 100%;
   background: #fff;
   margin: 0;
-
   padding: 15px 15px;
   font-size: 15px;
   cursor: pointer;
   color: #333539;
-}
 
-tfoot{
-  position: fixed;
-  bottom: 0;
 }
-
 
 
 .cart-bottom {
@@ -190,22 +186,36 @@ cart > div > cart-total > div > span {
   overflow-y: auto; 
 }
 
-.td-checkout{
-  width: 250px;
-}
+
 
 .cart-checkout {
-
+  z-index: 100;
+/*  position: inherit;
+  bottom: 0;*/
   background: #434653;
   border: none;
   width: 100%;
-  margin: 0;
   padding: 15px 15px 15px 15px;
   cursor: pointer;
   color: #f1f2f2;
   text-align: center;
   font-size: 30px;
 }
+
+.cart-checkout-adjusting-left {
+  z-index: 200;
+}
+
+
+.cart-footer{
+  position: absolute;
+  bottom: 0;
+  padding: none;
+}
+
+
+
+
 
 @media screen and (max-width: 992px) { 
   /* C A R T I C O N */
