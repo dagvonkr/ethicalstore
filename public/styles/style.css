@@ -232,15 +232,15 @@ header {
 .landingpage-placeholder {
 	width: 100%;
 	
-	background-image: url('img/skybg.jpg');
+/*	background-image: url('img/skybg.jpg');
 	background-position: center center;
   	background-repeat: no-repeat;
   	background-attachment: fixed;
-  	background-size: cover;
+  	background-size: cover;*/
 	font-size: 50px;
 	color: #fff;
 	text-align: center;
-	padding: 250px 20px 300px 20px;
+	padding: 160px 20px 300px 20px;
 
 }
 
